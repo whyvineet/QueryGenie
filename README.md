@@ -88,9 +88,9 @@ Provides utility functions.
      ```
 5. **Run the Bot** :
 
-```bash
-python bot.py
-```
+   ```
+   python bot.py
+   ```
 
 ## Usage
 
