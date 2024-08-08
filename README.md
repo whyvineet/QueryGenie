@@ -61,35 +61,32 @@ Provides utility functions.
 
 1. **Clone the Repository** :
 
-```bash
-git clone https://github.com/yourusername/QueryGenie.git
-cd QueryGenie
-```
+   ```
+   git clone https://github.com/yourusername/QueryGenie.git
+   cd QueryGenie
+   ```
+2. **Create and Activate a Virtual Environment** :
 
-1. **Create and Activate a Virtual Environment** :
    ```
    python -m virtualenv .venv
    source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
    ```
-2. **Install Dependencies** :
+3. **Install Dependencies** :
 
-```bash
-pip install python-telegram-bot --upgrade
-pip install python-dotenv
-pip install -q -U google-generativeai
-```
+   ```
+   pip install python-telegram-bot --upgrade
+   pip install python-dotenv
+   pip install -q -U google-generativeai
+   ```
+4. **Set Up Environment Variables** :
 
-1. **Set Up Environment Variables** :
-
-* Create a `.env` file in the project root.
-* Add your Telegram bot token and Gemini API key:
-
-  ```
-  TOKEN=your-telegram-bot-token
-  API_KEY=your-gemini-api-key
-  ```
-
-1. **Run the Bot** :
+   * Create a `.env` file in the project root.
+   * Add your Telegram bot token and Gemini API key:
+     ```
+     TOKEN=your-telegram-bot-token
+     API_KEY=your-gemini-api-key
+     ```
+5. **Run the Bot** :
 
 ```bash
 python bot.py
