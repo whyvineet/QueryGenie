@@ -97,6 +97,10 @@ Provides utility functions.
 * **Start the Bot**: Send the `/start` command to the bot to initialize the conversation.
 * **Chat with the Bot**: Send any text message to the bot, and it will respond using the generative AI model.
 
+## Learn More
+
+For a detailed explanation of how QueryGenie works and how you can create a similar bot, check out the article titled [Creating a Telegram Chatbot Powered by Gemini AI](https://www.geeksforgeeks.org/creating-a-telegram-chatbot-powered-by-gemini-ai/) by Vineet Kumar on GeeksforGeeks. The article walks you through the entire process, from setting up your development environment to deploying the bot, making it easier to understand the concepts behind QueryGenie.
+
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
