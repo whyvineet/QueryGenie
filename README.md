@@ -1,6 +1,6 @@
 # QueryGenie
 
-QueryGenie is a Telegram bot integrated with the Gemini API to assist users on Telegram. It is capable of generating responses to user queries using a generative AI model. This project is developed by Vineet Kumar.
+QueryGenie is a Telegram bot integrated with the Gemini API that assists Telegram users. It can generate responses to user queries using a generative AI model.
 
 ## Project Structure
 
@@ -21,40 +21,40 @@ QueryGenie/
 
 This is the main entry point for the Telegram bot. It configures and runs the bot.
 
-* **Imports** : Necessary modules and handlers.
-* **ApplicationBuilder** : Builds the application with the Telegram bot token.
-* **CommandHandler** : Handles the `/start` command.
-* **MessageHandler** : Handles text messages that are not commands.
-* **run_polling** : Starts the bot by polling for new updates.
+* **Imports**: Necessary modules and handlers.
+* **ApplicationBuilder**: Builds the application with the Telegram bot token.
+* **CommandHandler**: Handles the `/start` command.
+* **MessageHandler**: Handles text messages that are not commands.
+* **run_polling**: Starts the bot by polling for new updates.
 
 ### `config.py`
 
 Configures the environment and logging.
 
-* **dotenv** : Loads environment variables from a `.env` file.
+* **dotenv**: Loads environment variables from a `.env` file.
 * **TOKEN** : Telegram bot token.
-* **API_KEY** : API key for the generative AI model.
-* **logging** : Configures logging for debugging and information purposes.
+* **API_KEY**: API key for the generative AI model.
+* **logging**: Configures logging for debugging and information purposes.
 
 ### `genai_client.py`
 
 Handles interaction with the generative AI model from the Gemini API.
 
-* **genai** : Configures the generative model with the provided API key.
-* **generate_content** : Generates content based on a provided prompt.
+* **genai**: Configures the generative model with the provided API key.
+* **generate_content**: Generates content based on a provided prompt.
 
 ### `handlers.py`
 
 Defines handlers for the Telegram bot commands and messages.
 
-* **start** : Initializes chat history and sends a welcome message to the user.
-* **chat** : Handles incoming user messages, generates a response using the generative AI model, and replies to the user.
+* **start**: Initializes chat history and sends a welcome message to the user.
+* **chat**: Handles incoming user messages, generates a response using the generative AI model, and replies to the user.
 
 ### `utils.py`
 
 Provides utility functions.
 
-* **structure_message** : Structures messages with a specified role and content.
+* **structure_message**: Structures messages with a specified role and content.
 
 
 ## Setup Instructions
@@ -62,7 +62,7 @@ Provides utility functions.
 1. **Clone the Repository** :
 
    ```
-   git clone https://github.com/yourusername/QueryGenie.git
+   git clone https://github.com/whyvineet/QueryGenie.git
    cd QueryGenie
    ```
 2. **Create and Activate a Virtual Environment** :
@@ -94,8 +94,12 @@ Provides utility functions.
 
 ## Usage
 
-* **Start the Bot** : Send the `/start` command to the bot to initialize the conversation.
-* **Chat with the Bot** : Send any text message to the bot, and it will respond using the generative AI model.
+* **Start the Bot**: Send the `/start` command to the bot to initialize the conversation.
+* **Chat with the Bot**: Send any text message to the bot, and it will respond using the generative AI model.
+
+## Learn More
+
+For a detailed explanation of how QueryGenie works and how you can create a similar bot, check out the article titled [Creating a Telegram Chatbot Powered by Gemini AI](https://www.geeksforgeeks.org/creating-a-telegram-chatbot-powered-by-gemini-ai/) by Vineet Kumar on GeeksforGeeks. The article walks you through the entire process, from setting up your development environment to deploying the bot, making it easier to understand the concepts behind QueryGenie.
 
 ## License
 
