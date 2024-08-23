@@ -9,6 +9,7 @@ QueryGenie/
 ├── bot.py
 ├── config.py
 ├── handlers.py
+├── weather.py
 ├── genai_client.py
 ├── utils.py
 ├── LICENSE
@@ -48,14 +49,22 @@ Handles interaction with the generative AI model from the Gemini API.
 Defines handlers for the Telegram bot commands and messages.
 
 * **start**: Initializes chat history and sends a welcome message to the user.
+* **weather**: Handles the `/weather` command, fetching and returning weather information for a specified city.
 * **chat**: Handles incoming user messages, generates a response using the generative AI model, and replies to the user.
+
+### `weather.py`
+
+Manages weather-related functionality using an external weather API.
+
+* Uses the `requests` library to make API calls
+* Fetches real-time weather data for a specified city
+* Formats and returns weather information to the user
 
 ### `utils.py`
 
 Provides utility functions.
 
 * **structure_message**: Structures messages with a specified role and content.
-
 
 ## Setup Instructions
 
@@ -77,6 +86,7 @@ Provides utility functions.
    pip install python-telegram-bot --upgrade
    pip install python-dotenv
    pip install -q -U google-generativeai
+   pip install requests
    ```
 4. **Set Up Environment Variables** :
 
@@ -85,6 +95,7 @@ Provides utility functions.
      ```
      TOKEN=your-telegram-bot-token
      API_KEY=your-gemini-api-key
+     WEATHER_API_KEY=your-openweather-api-key
      ```
 5. **Run the Bot** :
 
@@ -95,7 +106,17 @@ Provides utility functions.
 ## Usage
 
 * **Start the Bot**: Send the `/start` command to the bot to initialize the conversation.
+* **Get Weather Information**: Use the `/weather` command followed by a city name to get current weather information. For example: `/weather Mumbai`
+  - The bot will respond with the current temperature and weather description for the specified city.
 * **Chat with the Bot**: Send any text message to the bot, and it will respond using the generative AI model.
+* **Continuous Conversation**: The bot maintains context, so you can have ongoing conversations about various topics.
+
+## Error Handling
+
+The bot includes error handling for various scenarios:
+* If the weather command is used incorrectly, the bot will provide instructions on proper usage.
+* If there's an issue fetching weather data, the bot will inform the user of the problem.
+* For any other errors, the bot will provide a friendly error message and encourage the user to try again.
 
 ## Learn More
 
